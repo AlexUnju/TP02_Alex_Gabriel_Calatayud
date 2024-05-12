@@ -26,8 +26,9 @@ class Dado extends GameObject {
 }
 
   // Métodos getter y setter para el atributo imagen
-  public int getImagen(){
+  public int getIndiceImagen(){
     return imagen;
+
   }
   
   public void setImagen(int imagen) {
@@ -35,10 +36,10 @@ class Dado extends GameObject {
   }
   
   // Métodos getter y setter para el atributo imagen
-    public int getValor(){
-    return imagen;
+    public int[] getValor(){
+    return valor;
   }
-  
+
 }
 
 
