@@ -2,14 +2,15 @@ class GameObject{
   //atributos
   protected PVector posicion;
   
-  //constructor por defector
+  //constructor por defecto
   public GameObject() {
     
   }
   //constructor parametrizado
   
   //metodos
-  
+  public void display(){
+  }
   //metodos get
   
   //metodos set
