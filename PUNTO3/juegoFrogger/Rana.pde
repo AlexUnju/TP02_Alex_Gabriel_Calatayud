@@ -2,32 +2,35 @@ class Rana {
   private PVector posicion;
   private PVector velocidad;
   private PImage imagen;
-  private String ranaImagen = "rana.png";
   
-  // Constructor
+  // Constructor por defecto
   public Rana() {
-    imagen = loadImage(ranaImagen);
-    imagen.resize(70,0);
-    posicion = new PVector(width/2-25, height-80);
+    cargarImagen();
+    posicion = new PVector(0, 0);
     velocidad = new PVector(0, 0);
   }
   
-  
+  // Método para cargar la imagen de la rana
+  private void cargarImagen() {
+    imagen = loadImage("rana.png");
+    imagen.resize(70, 0);
+  }
+ 
   // Método para mostrar la rana en su posición actual
-  void display() {
+  public void display() {
     image(imagen, posicion.x, posicion.y);
   }
   
   // Método para mover la rana y controlarla
-  void mover() {
+  public void mover() {
     if (keyPressed) {
-      if (keyCode == UP) {
+      if (key == 'w') {
         velocidad.y = -2; 
-      } else if (keyCode == DOWN) {
+      } else if (key == 's') {
         velocidad.y = 2;
-      } else if (keyCode == LEFT) {
+      } else if (key == 'a') {
         velocidad.x = -2;
-      } else if (keyCode == RIGHT) {
+      } else if (key == 'd') {
         velocidad.x = 2;
       }
     } else {
@@ -36,4 +39,23 @@ class Rana {
     }
     posicion.add(velocidad);
   }
+  
+   // Métodos get
+  public PVector getPosicion() {
+    return this.posicion;
+  }
+  
+  public PVector getVelocidad() {
+    return this.velocidad;
+  }
+  
+  // Métodos set
+  public void setPosicion(PVector posicion){
+    this.posicion=posicion;
+  }
+  
+  public void setVelocidad(PVector velocidad){
+    this.velocidad=velocidad;
+  }
+  
 }

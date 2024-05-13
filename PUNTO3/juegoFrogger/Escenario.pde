@@ -4,22 +4,20 @@ class Escenario {
   private PVector posicionCesped; 
   private PImage imagenSuelo;
   private PImage imagenCesped;
-  private String nombreImagenSuelo = "suelo.png";
-  private String nombreImagenCesped = "cesped.png";
-
-  // Constructor
-  public  Escenario(float x1, float y1, float x2, float y2, float xCesped, float yCesped, int width) {
-    posicion1 = new PVector(x1, y1);
-    posicion2 = new PVector(x2, y2);
-    posicionCesped = new PVector(xCesped, yCesped);
+  
+  // Constructor parametrizado
+  public Escenario(PVector pos1, PVector pos2, PVector posCesped, int ancho) {
+    this.posicion1 = pos1.copy();
+    this.posicion2 = pos2.copy();
+    this.posicionCesped = posCesped.copy();
     cargarImagenes();
   }
   
   // Método para cargar las imágenes del suelo y el césped
   void cargarImagenes() {
-    imagenSuelo = loadImage(nombreImagenSuelo);
+    imagenSuelo = loadImage("suelo.png");
     imagenSuelo.resize(50, 0);
-    imagenCesped = loadImage(nombreImagenCesped);
+    imagenCesped = loadImage("cesped.png");
     imagenCesped.resize(150, 0); 
   }
   
@@ -42,5 +40,32 @@ class Escenario {
       image(imagenCesped, xCesped, posicionCesped.y);
       xCesped += imagenCesped.width;
     }
+  }
+  
+  // Métodos get y set para posicion1
+  public PVector getPosicion1() {
+    return this.posicion1;
+  }
+  
+  public void setPosicion1(PVector posicion1) {
+    this.posicion1 = posicion1;
+  }
+  
+  // Métodos get y set para posicion2
+  public PVector getPosicion2() {
+    return this.posicion2;
+  }
+  
+  public void setPosicion2(PVector posicion2) {
+    this.posicion2 = posicion2;
+  }
+  
+  // Métodos get y set para posicionCesped
+  public PVector getPosicionCesped() {
+    return this.posicionCesped;
+  }
+  
+  public void setPosicionCesped(PVector posicionCesped) {
+    this.posicionCesped = posicionCesped;
   }
 }
