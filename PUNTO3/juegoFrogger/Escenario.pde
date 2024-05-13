@@ -7,9 +7,9 @@ class Escenario {
   
   // Constructor parametrizado
   public Escenario(PVector pos1, PVector pos2, PVector posCesped, int ancho) {
-    this.posicion1 = pos1.copy();
-    this.posicion2 = pos2.copy();
-    this.posicionCesped = posCesped.copy();
+    this.posicion1 = pos1;
+    this.posicion2 = pos2;
+    this.posicionCesped = posCesped;
     cargarImagenes();
   }
   
@@ -22,7 +22,7 @@ class Escenario {
   }
   
   // Método para dibujar el escenario con las imágenes
-  void dibujar() {
+  void display() {
     float x1 = posicion1.x;
     while (x1 < width) {
       image(imagenSuelo, x1, posicion1.y);

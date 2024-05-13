@@ -13,7 +13,7 @@ class Rana {
   // Método para cargar la imagen de la rana
   private void cargarImagen() {
     imagen = loadImage("rana.png");
-    imagen.resize(70, 0);
+    imagen.resize(30, 0);
   }
  
   // Método para mostrar la rana en su posición actual
