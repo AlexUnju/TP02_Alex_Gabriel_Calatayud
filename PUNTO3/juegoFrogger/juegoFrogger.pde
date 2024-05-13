@@ -1,6 +1,8 @@
 private Escenario escenario;
 private Rana rana;
 private SpawnerVehiculos spawnerVehiculos;
+private SpawnerTortugas spawnerTortugas;
+
 
 void setup() {
   size(600, 700);
@@ -21,6 +23,8 @@ void setup() {
   //SpawnVehiculos
   spawnerVehiculos = new SpawnerVehiculos(new PVector(0,0));
   
+  //SpawnTortugas
+  spawnerTortugas = new SpawnerTortugas(new PVector(0,0));
 }
   
 void draw() {
@@ -30,6 +34,9 @@ void draw() {
   rana.mover();
   spawnerVehiculos.visualizarVehiculos();
   spawnerVehiculos.mover(width);
+  spawnerTortugas.visualizarTortugas();
+  spawnerTortugas.mover(width);
+
 
 
 
