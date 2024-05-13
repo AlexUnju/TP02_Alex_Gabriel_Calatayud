@@ -44,8 +44,4 @@ void draw() {
   spawnerTortugas.mover(width);
   spawnerTroncos.visualizarTroncos();
   spawnerTroncos.mover(width);
-
-
-
-
 }
