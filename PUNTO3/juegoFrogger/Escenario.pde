@@ -1,14 +1,14 @@
 class Escenario {
-  PVector posicion1;
-  PVector posicion2;
-  PVector posicionCesped; 
-  PImage imagenSuelo;
-  PImage imagenCesped;
-  String nombreImagenSuelo = "suelo.png";
-  String nombreImagenCesped = "cesped.png";
+  private PVector posicion1;
+  private PVector posicion2;
+  private PVector posicionCesped; 
+  private PImage imagenSuelo;
+  private PImage imagenCesped;
+  private String nombreImagenSuelo = "suelo.png";
+  private String nombreImagenCesped = "cesped.png";
 
   // Constructor
-  Escenario(float x1, float y1, float x2, float y2, float xCesped, float yCesped, int width) {
+  public  Escenario(float x1, float y1, float x2, float y2, float xCesped, float yCesped, int width) {
     posicion1 = new PVector(x1, y1);
     posicion2 = new PVector(x2, y2);
     posicionCesped = new PVector(xCesped, yCesped);
